@@ -69,6 +69,18 @@ properties([disableConcurrentBuilds(),gitLabConnection('Gitlab')])
                 }
 
                 updateGitlabCommitStatus name: STAGE_NAME, state: 'success'
+	stage("Recording TestResults"){
+                //              if(!("${BRANCH_NAME}" ==~ "^Master-[0-9]*")){
+                //         updateGitlabCommitStatus name: STAGE_NAME, state: 'running'
+                //             }
+                //               pipelineStage = "${STAGE_NAME}"
+                //         unitTesting1 {
+                  
+                //                   NUnit = "${nunit}"
+                //         }          
+                //         updateGitlabCommitStatus name: STAGE_NAME, state: 'success'
+                // }
+
                 
             }
             if ("${executeSonar}" == 'YES') {
